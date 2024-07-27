@@ -43,21 +43,20 @@ public class Person {
         return gender;
     }
 
+
     public void print() {
-        System.out.println("Name: " + name);
-        System.out.println("Last Name: " + lastName);
-        System.out.println("DNI: " + dni);
-        System.out.println("Date: " + date);
-        System.out.println("Country: " + country);
-        System.out.println("Gender: " + gender);
+        System.out.println(this.toString());
+
     }
 
-    public static void main(String[] args) {
-        Person person1 = new Person("Bob", "Esponja", "01010101X", 1999, "EE.UU", 'H');
-        Person person2 = new Person("Arenita", "Mejillas", "46543654A", 2001, "Mexico", 'M');
-        
-        person1.print();
-        System.out.println();
-        person2.print();
+    @Override
+    public String toString() {
+        return "Person:\n" +
+                "Name: " + name + "\n" +
+                "Last Name: " + lastName + "\n" +
+                "DNI: " + dni + "\n" +
+                "Date: " + date + "\n" +
+                "Country: " + country + "\n" +
+                "Gender: " + gender;
     }
 };
